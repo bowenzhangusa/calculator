@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqK-k9-60O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqK-k9-60O">
                                 <rect key="frame" x="20" y="20" width="560" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,18 +45,6 @@
                                 <state key="normal" title="⏎"/>
                                 <connections>
                                     <action selector="enter" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7d-Tl-5mf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvq-km-Ush">
-                                <rect key="frame" x="20" y="67" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="6QU-Vq-MoK"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="xDG-HT-Q5f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="7"/>
-                                <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dwN-Il-BM4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSM-5E-oQe">
@@ -215,22 +203,38 @@
                                     <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpj-CY-ePW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvq-km-Ush">
+                                <rect key="frame" x="20" y="67" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="6QU-Vq-MoK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="xDG-HT-Q5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="7"/>
+                                <connections>
+                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dwN-Il-BM4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yAE-Fi-wMW" firstAttribute="width" secondItem="lvq-km-Ush" secondAttribute="width" id="1eM-13-TAd"/>
                             <constraint firstItem="lvq-km-Ush" firstAttribute="top" secondItem="RqK-k9-60O" secondAttribute="bottom" constant="8" id="36N-Yd-KQS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yAE-Fi-wMW" secondAttribute="bottom" constant="8" id="D1G-28-gQ6"/>
+                            <constraint firstItem="sC7-ru-gIX" firstAttribute="top" secondItem="RqK-k9-60O" secondAttribute="bottom" constant="8" id="GN3-cb-L8Q"/>
                             <constraint firstItem="gHg-Co-ldW" firstAttribute="top" secondItem="RqK-k9-60O" secondAttribute="bottom" constant="8" id="HJE-oZ-ed3"/>
                             <constraint firstItem="gHg-Co-ldW" firstAttribute="top" secondItem="RqK-k9-60O" secondAttribute="bottom" constant="8" id="HcP-6G-NMe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RqK-k9-60O" secondAttribute="trailing" id="Hhd-fE-n0A"/>
                             <constraint firstItem="gHg-Co-ldW" firstAttribute="width" secondItem="lvq-km-Ush" secondAttribute="width" id="HpA-00-poe"/>
                             <constraint firstItem="gHg-Co-ldW" firstAttribute="top" secondItem="RqK-k9-60O" secondAttribute="bottom" constant="8" id="TiB-A9-VEr"/>
                             <constraint firstItem="gHg-Co-ldW" firstAttribute="height" secondItem="lvq-km-Ush" secondAttribute="height" id="bgz-A5-3mh"/>
                             <constraint firstItem="lvq-km-Ush" firstAttribute="top" secondItem="RqK-k9-60O" secondAttribute="bottom" constant="8" id="brx-ot-u9E"/>
+                            <constraint firstItem="RqK-k9-60O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="frM-xa-QND"/>
                             <constraint firstItem="gHg-Co-ldW" firstAttribute="width" secondItem="lvq-km-Ush" secondAttribute="width" id="jmh-sc-iHm"/>
                             <constraint firstItem="yAE-Fi-wMW" firstAttribute="width" secondItem="lvq-km-Ush" secondAttribute="width" id="jwb-iu-w6F"/>
                             <constraint firstItem="yAE-Fi-wMW" firstAttribute="height" secondItem="lvq-km-Ush" secondAttribute="height" id="n7u-ZW-rdk"/>
                             <constraint firstItem="lvq-km-Ush" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qLf-te-fcw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="uAX-kb-0cm" secondAttribute="leading" id="qlS-Ae-XpP"/>
                             <constraint firstItem="yAE-Fi-wMW" firstAttribute="height" secondItem="lvq-km-Ush" secondAttribute="height" id="u49-cq-gZw"/>
                             <constraint firstItem="gHg-Co-ldW" firstAttribute="height" secondItem="lvq-km-Ush" secondAttribute="height" id="utp-Q1-jBa"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RqK-k9-60O" secondAttribute="leading" id="xEb-5k-2cD"/>
